@@ -4,6 +4,16 @@ import React, { useEffect, useState } from "react";
 import logo from "../../../public/images/logo.jpeg";
 import { motion } from "framer-motion";
 
+const BarDecor = ({ className = "" }) => (
+  <div
+    className={`flex flex-row items-end justify-center gap-2 sm:gap-3 ${className}`}
+  >
+    <div className="h-20 w-1.5 rounded-lg bg-black sm:h-24 sm:w-2 md:h-64 lg:h-80" />
+    <div className="h-16 w-1.5 rounded-lg bg-[#ab723a] sm:h-20 sm:w-2 md:h-56 lg:h-72" />
+    <div className="h-24 w-1.5 rounded-lg bg-black sm:h-28 sm:w-2 md:h-72 lg:h-96" />
+  </div>
+);
+
 const Upperpage = () => {
   const [hidden, setHidden] = useState(false);
 
@@ -28,38 +38,51 @@ const Upperpage = () => {
       animate={{ y: "-100%" }}
       transition={{ duration: 3, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
       onAnimationComplete={() => setHidden(true)}
-      className="fixed inset-0 z-[100] flex flex-row items-center justify-between gap-5 overflow-hidden bg-white px-4 py-8 text-black md:py-12"
+      className="fixed inset-0 z-[100] overflow-hidden bg-white text-black"
     >
-      <Image
-        src={logo}
-        alt="Naveed Trading Company"
-        className="relative max-h-[40vh] w-auto object-contain md:max-h-none md:w-1/3"
-      />
+      {/* Mobile & small tablets: stacked layout */}
+      <div className="flex h-full min-h-0 flex-col i gap-10 px-5 py-12 text-center sm:gap-12 sm:px-8 md:hidden">
+        <div className="flex flex-col items-center gap-4">
+          <Image
+            src={logo}
+            alt="Naveed Trading Company"
+            className="h-24 w-24 shrink-0 rounded-full border-2 border-amber-400 object-contain sm:h-28 sm:w-28"
+            priority
+          />
 
-      <div className="hidden flex-col gap-5 md:flex">
-        <div className="mt-4 flex flex-row items-center justify-center gap-3">
-          <div className="h-48 w-2 rounded-lg bg-black md:h-64 lg:h-80" />
-          <div className="h-40 w-2 rounded-lg bg-[#ab723a] md:h-56 lg:h-72" />
-          <div className="h-52 w-2 rounded-lg bg-black md:h-72 lg:h-96" />
+          {/* <div className="max-w-xs w-full space-y-2  sm:max-w-sm sm:space-y-3  "
+          s>
+            <h1 className="text-lg font-bold uppercase leading-tight tracking-wide sm:text-2xl">
+              Naveed trading company
+            </h1>
+            <p className="text-xs uppercase leading-relaxed text-neutral-700 sm:text-sm">
+              Delivering Quality, Fulfilling Trust
+            </p>
+          </div> */}
         </div>
+
+        <BarDecor />
       </div>
 
-      <div className="hidden flex-col md:flex">
-        <h1 className="text-center text-[5rem] font-bold uppercase">
-          Naveed trading company
-        </h1>
-        <p className="text-center text-xl uppercase">
-          Delivering Quality, Fulfilling Trust
-        </p>
-      </div>
+      {/* Desktop: horizontal layout */}
+      <div className="hidden h-full min-h-0 flex-row items-center justify-between gap-6 px-8 py-12 lg:gap-10 lg:px-12 lg:py-16 md:flex">
+        <Image
+          src={logo}
+          alt="Naveed Trading Company"
+          className="h-auto max-h-[55vh] w-[28%] min-w-[140px] max-w-[280px] shrink-0 object-contain lg:w-1/4"
+          priority
+        />
 
-      <div className="absolute left-1/2 top-1/2 z-10 flex w-[90%] -translate-x-1/2 -translate-y-1/2 flex-col gap-5 text-center md:hidden">
-        <h1 className="text-base font-bold uppercase sm:text-lg">
-          Naveed trading company
-        </h1>
-        <p className="text-sm uppercase sm:text-lg">
-          Delivering Quality, Fulfilling Trust
-        </p>
+        <BarDecor className="shrink-0" />
+
+        <div className="min-w-0 flex-1 max-w-2xl space-y-3 text-center lg:space-y-4">
+          <h1 className="text-3xl font-bold uppercase leading-tight lg:text-5xl xl:text-[5rem]">
+            Naveed trading company
+          </h1>
+          <p className="text-base uppercase text-neutral-700 lg:text-xl">
+            Delivering Quality, Fulfilling Trust
+          </p>
+        </div>
       </div>
     </motion.div>
   );

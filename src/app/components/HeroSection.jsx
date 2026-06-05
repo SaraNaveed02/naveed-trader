@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 const HeroSection = () => {
   return (
     <div className="relative w-full h-screen overflow-hidden">
-  <div className="relative w-full h-screen max-[639px]:w-[640px] max-[639px]:origin-top-left max-[639px]:scale-[calc(100vw/640px)] max-[639px]:h-[calc(100vh*640px/100vw)]">
+  <div className="relative w-full  max-[639px]:w-[640px] max-[639px]:origin-top-left max-[639px]:scale-[calc(100vw/640px)] max-[639px]:h-[calc(100vh*640px/100vw)]">
  {/* left small circle css */}
   <div className=" relative  ">
     <motion.div
