@@ -41,24 +41,21 @@ const Upperpage = () => {
       className="fixed inset-0 z-[100] overflow-hidden bg-white text-black"
     >
       {/* Mobile & small tablets: stacked layout */}
-      <div className="flex h-full min-h-0 flex-col i gap-10 px-5 py-12 text-center sm:gap-12 sm:px-8 md:hidden">
-        <div className="flex flex-col items-center gap-4">
-          <Image
-            src={logo}
-            alt="Naveed Trading Company"
-            className="h-24 w-24 shrink-0 rounded-full border-2 border-amber-400 object-contain sm:h-28 sm:w-28"
-            priority
-          />
+      <div className="flex h-full min-h-0 flex-col items-center justify-center gap-10 px-5 py-12 text-center sm:gap-12 sm:px-8 md:hidden">
+        <Image
+          src={logo}
+          alt="Naveed Trading Company"
+          className="h-24 w-24 shrink-0 rounded-full border-2 border-amber-400 object-contain sm:h-28 sm:w-28"
+          priority
+        />
 
-          {/* <div className="max-w-xs w-full space-y-2  sm:max-w-sm sm:space-y-3  "
-          s>
-            <h1 className="text-lg font-bold uppercase leading-tight tracking-wide sm:text-2xl">
-              Naveed trading company
-            </h1>
-            <p className="text-xs uppercase leading-relaxed text-neutral-700 sm:text-sm">
-              Delivering Quality, Fulfilling Trust
-            </p>
-          </div> */}
+        <div className="max-w-xs w-full space-y-2 sm:max-w-sm sm:space-y-3">
+          <h1 className="text-lg font-bold uppercase leading-tight tracking-wide sm:text-2xl">
+            Naveed trading company
+          </h1>
+          <p className="text-xs uppercase leading-relaxed text-neutral-700 sm:text-sm">
+            Delivering Quality, Fulfilling Trust
+          </p>
         </div>
 
         <BarDecor />
