@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const BarDecor = ({ className = "" }) => (
   <div
-    className={`flex flex-row items-end justify-center gap-2 sm:gap-3 ${className}`}
+    className={`md:flex flex-row items-end justify-center gap-2 sm:hidden ${className}`}
   >
     <div className="h-20 w-1.5 rounded-lg bg-black sm:h-24 sm:w-2 md:h-64 lg:h-80" />
     <div className="h-16 w-1.5 rounded-lg bg-[#ab723a] sm:h-20 sm:w-2 md:h-56 lg:h-72" />
