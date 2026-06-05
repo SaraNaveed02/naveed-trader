@@ -8,37 +8,37 @@ const HeroSection = () => {
         initial={{ width: 0, height: 0 }}
         whileInView={{ width: 160, height: 160 }}
         transition={{ duration: 1.5 }}
-        className="w-40 h-40 rounded-full bg-amber-600 absolute top-16 left-6"
+        className="w-28 h-28 md:w-40 md:h-40 rounded-full bg-amber-600 absolute top-10 md:top-16 left-4 md:left-6"
       />
       <motion.div
         initial={{ width: 0, height: 0 }}
         whileInView={{ width: 160, height: 160 }}
         transition={{ duration: 1.5, delay: 0.5 }}
-        className="w-40 h-40 rounded-full bg-amber-400 opacity-50 absolute top-36 left-24 z-10"
+        className="w-28 h-28 md:w-40 md:h-40 rounded-full bg-amber-400 opacity-50 absolute top-24 md:top-36 left-12 md:left-24 z-10"
       />
       <motion.div
         initial={{ width: 0, height: 0 }}
         whileInView={{ width: 160, height: 160 }}
         transition={{ duration: 1.5, delay: 1 }}
-        className="w-40 h-40 rounded-full bg-amber-200 absolute top-56 left-8 opacity-90 z-0"
+        className="w-28 h-28 md:w-40 md:h-40 rounded-full bg-amber-200 absolute top-40 md:top-56 left-2 md:left-8 opacity-90 z-0"
       />
       <motion.div
         initial={{ x: 150 }}
         whileInView={{ x: 0 }}
         transition={{ duration: 2 }}
-        className="w-80 h-80 rounded-bl-full bg-amber-300 absolute top-0 right-0"
+        className="hidden md:block w-80 h-80 rounded-bl-full bg-amber-300 absolute top-0 right-0"
       />
       <motion.div
         initial={{ width: 0, height: 0 }}
         whileInView={{ width: 160, height: 160 }}
         transition={{ duration: 1.5, delay: 1 }}
-        className="w-40 h-40 rounded-full bg-amber-300 opacity-50 absolute top-40 right-40 z-10"
+        className="hidden md:block w-40 h-40 rounded-full bg-amber-300 opacity-50 absolute top-40 right-40 z-10"
       />
       <motion.div
         initial={{ x: -100 }}
         whileInView={{ x: 0 }}
         transition={{ duration: 2 }}
-        className="w-80 h-80 rounded-tr-full bg-amber-300 absolute bottom-10 left-0"
+        className="hidden md:block w-80 h-80 rounded-tr-full bg-amber-300 absolute bottom-10 left-0"
       />
 
       <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center z-20">
