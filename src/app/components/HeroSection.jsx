@@ -26,19 +26,19 @@ const HeroSection = () => {
         initial={{ x: 150 }}
         whileInView={{ x: 0 }}
         transition={{ duration: 2 }}
-        className="w-80 h-80 rounded-bl-full bg-amber-300 absolute top-0 right-0"
+        className="md:w-80 md:h-80 w-40 h-40 rounded-bl-full bg-amber-300 absolute top-0 right-0 "
       />
       <motion.div
         initial={{ width: 0, height: 0 }}
         whileInView={{ width: 160, height: 160 }}
         transition={{ duration: 1.5, delay: 1 }}
-        className=" w-40 h-40 rounded-full bg-amber-300 opacity-50 absolute top-40 right-40 z-10"
+        className="md:block hidden w-40 h-40 rounded-full bg-amber-300 opacity-50 absolute top-40 right-40 z-10"
       />
       <motion.div
         initial={{ x: -100 }}
         whileInView={{ x: 0 }}
         transition={{ duration: 2 }}
-        className=" w-80 h-80 rounded-tr-full bg-amber-300 absolute bottom-10 left-0"
+        className=" md:w-80 md:h-80 w-40 h-40  rounded-tr-full bg-amber-300 absolute bottom-10 left-0"
       />
 
       <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center z-20">
