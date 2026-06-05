@@ -49,8 +49,7 @@ const HeroSection = () => {
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis explicabo asperiores rerum repellat.
         </p>
       </div>
-      
-    </div>
+  </div>
   );
 };
 
